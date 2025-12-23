@@ -96,8 +96,8 @@ services:
         max-file: "3"
 COMPOSEEOF
 
-# Build and start services (API + Dashboard only, skip testing services)
-docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d creative-api dashboard
+# Build and start services using simplified compose (no cat-scan)
+docker compose -f docker-compose.simple.yml up -d --build
 
 echo "Cat-Scan setup complete!"
 echo "Dashboard: http://$PUBLIC_IP:3000"
