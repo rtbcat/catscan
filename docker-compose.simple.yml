@@ -10,7 +10,6 @@ services:
       - "8000:8000"
     volumes:
       - catscan-data:/home/rtbcat/.catscan
-      - ./credentials:/credentials:ro
     environment:
       - GOOGLE_APPLICATION_CREDENTIALS=/credentials/google-credentials.json
       - DATABASE_PATH=/home/rtbcat/.catscan/catscan.db
